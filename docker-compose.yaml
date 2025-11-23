@@ -1,14 +1,14 @@
 services:
   erddap:
     container_name: erddap
-      #image: axiom/docker-erddap:v2.28.1
     image: erddap/erddap:20251121T183110
     restart: unless-stopped
     hostname: dummy-erddap
     ports:
       - 8080:8080
+
     volumes:
       - ./conf:/usr/local/tomcat/content/erddap
       - ./erddapData:/erddapData   # bind mount for ERDDAP internal data
       - ./datasets:/datasets # bind mount for user data files
-      - ./conf/custom_logo.png:/usr/local/tomcat/webapps/erddap/images/custom_logo.png:ro
+      - ./conf/digi4eco.png:/usr/local/tomcat/webapps/erddap/images/logo.png:ro

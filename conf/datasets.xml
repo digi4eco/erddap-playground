@@ -74,22 +74,22 @@ ERDDAP follows
 
 <startBodyHtml5><![CDATA[
 <body>
-<table class="compact nowrap" style="width:100%; background-color:#128CB5;">
+<table class="compact nowrap" style="width:100%; background-color:#FFFFFF;">
   <tr> 
     <td style="text-align:center; width:80px;"><a rel="bookmark"
-      href="https://emso.eu/"><img
-      title="EMSO"
-      src="&erddapUrl;/images/custom_logo.png" alt="YOUR LOGO" height="120" width="120"
+      href="https://digi4eco.eu/"><img
+      title="DIGI4ECO"
+      src="&erddapUrl;/images/logo.png" alt="DIGI4ECO" height="120" width="120"
       style="vertical-align:middle;"></a></td> 
-    <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
-      <strong>ERDDAP</strong>
-      <br><small><small><small>&EasierAccessToScientificData;</small></small></small>
+    <td style="text-align:left; font-size:x-large; color:#000000; ">
+      <strong>DIGI4ECO ERDDAP</strong>
+      <br><small><small><small>Example ERDDAP deployment for DIGI4ECO</small></small></small>
       </td> 
     <td style="text-align:right; font-size:small;"> 
       &loginInfo; | &language; &nbsp; &nbsp;
       <br>&BroughtToYouBy; 
-      <a title="EMSO"
-      href="https://emso.eu/">EMSO</a>
+      <a title="DIGI4ECO"
+      href="https://digi4eco.eu/">DIGI4ECO</a>
       <a title="Universitat Politècnica de Catalunya" rel="bookmark"
       href="https://www.upce.du">UPC</a>
       &nbsp; &nbsp;
