@@ -1,129 +1,126 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <erddapDatasets>
-  <!-- GENERAL INFORMATION
-    The information in this file specifies which datasets your ERDDAP will serve.
-    The initial version of this file has a few examples which should work for you.
-    But after your initial experiments with ERDDAP,
-    you should replace them with information for your datasets.
+<!-- GENERAL INFORMATION
+The information in this file specifies which datasets your ERDDAP will serve.
+The initial version of this file has a few examples which should work for you.
+But after your initial experiments with ERDDAP, 
+you should replace them with information for your datasets.
 
-    You can change this document (e.g., add datasets, change metadata) while ERDDAP is running.
-    The changes will be detected the next time this document is read
-    (as often as loadDatasetsMinMinutes).
+You can change this document (e.g., add datasets, change metadata) while ERDDAP is running. 
+The changes will be detected the next time this document is read
+(as often as loadDatasetsMinMinutes).
 
-    Each dataset has a reloadEveryNMinutes value (default = 15 (one week)).
-    When this document is reread, datasets that haven't been been reloaded in
-    their reloadEveryNMinutes will be reloaded.
-    You only need to specify a reloadEveryNMinutes value if you anticipate that
-    the dataset will change periodically.
+Each dataset has a reloadEveryNMinutes value (default = 10080 (one week)).
+When this document is reread, datasets that haven't been been reloaded in 
+their reloadEveryNMinutes will be reloaded.
+You only need to specify a reloadEveryNMinutes value if you anticipate that
+the dataset will change periodically.
 
-    If this document has an xml error, processing will stop and an email
-    will be sent to emailEverythingTo as specified in setup.xml.
+If this document has an xml error, processing will stop and an email
+will be sent to emailEverythingTo as specified in setup.xml.
 
-    If you want to remove a dataset while ERDDAP is running, add
-        active="false"
-    to the dataset tag.  For example,
-        <dataset type="EDDGridFromDap" datasetID="erdMHchla8day" active="false">
+If you want to remove a dataset while ERDDAP is running, add 
+    active="false"
+to the dataset tag.  For example,
+    <dataset type="EDDGridFromDap" datasetID="erdMHchla8day" active="false">
 
-    For more information, see
-    https://coastwatch.pfel.noaa.gov/erddap/download/setupDatasetsXml.html
-    -->
-  <!-- The tags below are described in setupDatasetsXml.html.
-         The defaults listed below are as of ERDDAP v2.00. -->
-  <cacheMinutes/>
-  <!-- default=60 -->
-  <decompressedCacheMaxGB/>
-  <!-- default=10 -->
-  <decompressedCacheMaxMinutesOld/>
-  <!-- default=15 -->
-  <drawLandMask/>
-  <!-- "over" or "under" (default) -->
-  <graphBackgroundColor/>
-  <!-- 0xAARRGGBB, default is 0xffccccff -->
-  <loadDatasetsMinMinutes/>
-  <!-- usually=default=15 -->
-  <loadDatasetsMaxMinutes/>
-  <!-- default=60 -->
-  <logLevel/>
-  <!-- "warning" (fewest messages), "info" (default), or "all" (most messages) -->
-  <nGridThreads/>
-  <!-- default=1 -->
-  <nTableThreads/>
-  <!-- default=1 -->
-  <partialRequestMaxBytes/>
-  <!-- default=490000000 -->
-  <partialRequestMaxCells/>
-  <!-- default=10000000 -->
-  <slowDownTroubleMillis/>
-  <!-- default=1000 -->
-  <unusualActivity/>
-  <!-- default=10000 -->
-  <!-- The defaults for the following tags are in messages.xml. -->
-  <startHeadHtml5>Dummy ERDDAP Server</startHeadHtml5>
-  <endBodyHtml5/>
-  <standardLicense/>
-  <standardContact/>
-  <standardDataLicenses/>
-  <standardDisclaimerOfEndorsement/>
-  <standardDisclaimerOfExternalLinks/>
-  <standardGeneralDisclaimer/>
-  <standardPrivacyPolicy>
-        &lt;br&gt;&amp;nbsp;
-        &lt;hr&gt;
-        &lt;h2&gt;&lt;a class="selfLink" id="privacyPolicy" href="#privacyPolicy" rel="help"&gt;Privacy Policy&lt;/a&gt;&lt;/h2&gt;
-        ERDDAP follows
-        &lt;a rel="bookmark" href="https://www.noaa.gov/protecting-your-privacy"
-        &gt;NOAA's Privacy Policy Guidelines&lt;/a&gt;.
-    </standardPrivacyPolicy>
-  <startBodyHtml5>
-        &lt;body&gt;
-        &lt;table class="compact nowrap" style="width:100%; background-color:#356a9eff;"&gt;
-        &lt;tr&gt;
-        &lt;td style="text-align:center; width:80px;"&gt;&lt;a rel="bookmark"
-        href="https://www.fakeurl.es"&gt;&lt;img <!-- Add your URL here -->
-        title="Dummy ERDDAP" <!-- Add your title here -->
-        src="&amp;erddapUrl;/images/obsea_logo_blanc.png" alt="CustomErddap"
-        style="vertical-align:middle;" height="120" width="120"&gt;&lt;/a&gt;&lt;/td&gt;
-        &lt;td style="text-align:left; font-size:x-large; color:#FFFFFF; "&gt;
-        &lt;strong&gt;  My ERDDAP Title&lt;/strong&gt;
-        &lt;br&gt;&lt;small&gt;&lt;small&gt;&lt;small&gt;  ADD SOME TEXT HERE&lt;/small&gt;&lt;/small&gt;&lt;/small&gt;
-        &lt;/td&gt;
-        &lt;td style="text-align:right; font-size:small;"&gt;
-        &amp;loginInfo; &amp;nbsp; &amp;nbsp;
-        &lt;br&gt;Brought to you by
-        &lt;a title="European Multidisciplinary Seafloor and water column Observatory" rel="bookmark"
-        href="http://www.emso.eu"&gt;EMSO&lt;/a&gt;
-        &lt;a title="Your Institution" rel="bookmark"
-        href="https://www.YOUR.INSTITUTION.edu/en"&gt;Your institution&lt;/a&gt;
+For more information, see 
+https://erddap.github.io/docs/server-admin/datasets
+-->
+
+<!-- The tags below are described in https://erddap.github.io/docs/server-admin/datasets.
+     The defaults listed below are as of ERDDAP v2.00. -->
+<cacheMinutes></cacheMinutes>                                     <!-- default=60 --> 
+<cacheClearMinutes></cacheClearMinutes>                           <!-- default=15 --> 
+<decompressedCacheMaxGB></decompressedCacheMaxGB>                 <!-- default=10 --> 
+<decompressedCacheMaxMinutesOld></decompressedCacheMaxMinutesOld> <!-- default=15 --> 
+<drawLandMask></drawLandMask>                                     <!-- "over", "under" (default), "outline", or "off" -->
+<emailDiagnosticsToErdData></emailDiagnosticsToErdData>           <!-- "true (default) or "false" -->
+<graphBackgroundColor></graphBackgroundColor>                     <!-- 0xAARRGGBB, default is 0xffccccff -->
+<ipAddressMaxRequests></ipAddressMaxRequests>                     <!-- current default=7 -->
+<ipAddressMaxRequestsActive></ipAddressMaxRequestsActive>         <!-- current default=2 -->
+<ipAddressUnlimited></ipAddressUnlimited>                         <!-- default=(empty) -->
+<loadDatasetsMinMinutes></loadDatasetsMinMinutes>                 <!-- usually=default=15 -->
+<loadDatasetsMaxMinutes></loadDatasetsMaxMinutes>                 <!-- default=60 -->
+<logLevel></logLevel> <!-- "warning" (fewest messages), "info" (default), or "all" (most messages) -->
+<nGridThreads></nGridThreads>                                     <!-- default=1 -->
+<nTableThreads></nTableThreads>                                   <!-- default=1 -->
+<partialRequestMaxBytes></partialRequestMaxBytes>                 <!-- default=490000000 -->
+<partialRequestMaxCells></partialRequestMaxCells>                 <!-- default=10000000 -->
+<slowDownTroubleMillis></slowDownTroubleMillis>                   <!-- default=1000 -->
+<unusualActivity></unusualActivity>                               <!-- default=10000 -->
+<updateMaxEvents></updateMaxEvents>                               <!-- default=10 -->
+<unusualActivityFailPercent>25</unusualActivityFailPercent>       <!-- default=25 -->
+<!-- The defaults for the following tags are in messages.xml. -->
+<startHeadHtml5></startHeadHtml5>                                
+<endBodyHtml5></endBodyHtml5>
+<standardLicense></standardLicense>
+<standardContact></standardContact>
+<standardDataLicenses></standardDataLicenses>
+<standardDisclaimerOfEndorsement></standardDisclaimerOfEndorsement>
+<standardDisclaimerOfExternalLinks></standardDisclaimerOfExternalLinks>
+<standardGeneralDisclaimer></standardGeneralDisclaimer>
+<displayInfo></displayInfo>
+<displayAttribute></displayAttribute>
+
+<standardPrivacyPolicy><![CDATA[
+<br>&nbsp;
+<hr>
+<h2><a class="selfLink" id="privacyPolicy" href="#privacyPolicy" rel="help">Privacy Policy</a></h2>
+ERDDAP follows 
+<a rel="bookmark" href="https://www.noaa.gov/protecting-your-privacy"
+  >NOAA's Privacy Policy Guidelines</a>.
+]]></standardPrivacyPolicy>
+
+<startBodyHtml5><![CDATA[
+<body>
+<table class="compact nowrap" style="width:100%; background-color:#128CB5;">
+  <tr> 
+    <td style="text-align:center; width:80px;"><a rel="bookmark"
+      href="https://emso.eu/"><img
+      title="EMSO"
+      src="&erddapUrl;/images/custom_logo.png" alt="YOUR LOGO" height="120" width="120"
+      style="vertical-align:middle;"></a></td> 
+    <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
+      <strong>ERDDAP</strong>
+      <br><small><small><small>&EasierAccessToScientificData;</small></small></small>
+      </td> 
+    <td style="text-align:right; font-size:small;"> 
+      &loginInfo; | &language; &nbsp; &nbsp;
+      <br>&BroughtToYouBy; 
+      <a title="EMSO"
+      href="https://emso.eu/">EMSO</a>
+      <a title="Universitat Politècnica de Catalunya" rel="bookmark"
+      href="https://www.upce.du">UPC</a>
+      &nbsp; &nbsp;
+      </td> 
+  </tr> 
+</table>
+]]></startBodyHtml5>
+
+<theShortDescriptionHtml><![CDATA[ 
+<h1>ERDDAP</h1>
+&erddapIs;
+&thisParticularErddap;
+[standardShortDescriptionHtml]
+]]></theShortDescriptionHtml>
 
 
-        &amp;nbsp; &amp;nbsp;
-        &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;/table&gt;
-    </startBodyHtml5>
-  <theShortDescriptionHtml>
-        &lt;h1&gt;ERDDAP&lt;/h1&gt;
-        ERDDAP is a data server that gives you a simple, consistent way to download
-        subsets of scientific datasets in common file formats and make graphs and maps.
-        This particular ERDDAP installation has oceanographic data
-        (for example, data from satellites and buoys).
+<!-- If you want to refuse requests from certain clients
+  (e.g., to fend off a Denial of Service attack or an overly zealous web robot), 
+  add their numeric IP address (e.g., 123.45.67.89) to this comma-separated list. 
+  You can also replace the last number in an IP address with * to block 0-255 (e.g., 123.45.67.*).
+  See your ERDDAP daily report for a list/tally of the most active requesters. -->
+<requestBlacklist></requestBlacklist>
 
-        [standardShortDescriptionHtml]
 
-    </theShortDescriptionHtml>
-  <!-- If you want to refuse requests from certain clients
-      (e.g., to fend off a Denial of Service attack or an overly zealous web robot),
-      add their numeric IP address (e.g., 123.45.67.89) to this comma-separated list.
-      You can also replace the last number in an IP address with * to block 0-255 (e.g., 123.45.67.*).
-      See your ERDDAP daily report for a list/tally of the most active requesters. -->
-  <requestBlacklist/>
-  <!-- If you want to prevent specific people from using the email/URL subscription
-         system, add their email addresses to this comma-separated list.
-         You can use the name "*" to blacklist an entire domain, e.g., *@example.com .
-    -->
-  <subscriptionEmailBlacklist>your.email@yourinstitution.edu, some.name@company.com,
-        another.name@company.com, *@example.com
-    </subscriptionEmailBlacklist>
+<!-- If you want to prevent specific people from using the email/URL subscription
+     system, add their email addresses to this comma-separated list. 
+     You can use the name "*" to blacklist an entire domain, e.g., *@example.com .
+-->
+<subscriptionEmailBlacklist>your.email@yourinstitution.edu, some.name@company.com,
+another.name@company.com, *@example.com</subscriptionEmailBlacklist>
+
 
 <dataset type="EDDTableFromMultidimNcFiles" datasetID="DummyData" active="true">
   <reloadEveryNMinutes>10080</reloadEveryNMinutes>
@@ -199,4 +196,5 @@
     <addAttributes/>
   </dataVariable>
 </dataset>
+
 </erddapDatasets>

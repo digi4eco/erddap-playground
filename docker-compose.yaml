@@ -1,9 +1,8 @@
-version: '3'
-
 services:
   erddap:
     container_name: erddap
-    image: axiom/docker-erddap:2.18
+      #image: axiom/docker-erddap:v2.28.1
+    image: erddap/erddap:20251121T183110
     restart: unless-stopped
     hostname: dummy-erddap
     ports:
@@ -12,4 +11,4 @@ services:
       - ./conf:/usr/local/tomcat/content/erddap
       - ./erddapData:/erddapData   # bind mount for ERDDAP internal data
       - ./datasets:/datasets # bind mount for user data files
-      - /home/enoc/workspace/erddap-playground/conf/custom_logo.png:/usr/local/tomcat/webapps/erddap/images/obsea_logo_blanc.png
+      - ./conf/custom_logo.png:/usr/local/tomcat/webapps/erddap/images/custom_logo.png:ro

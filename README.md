@@ -5,7 +5,7 @@ This repository contains all files required to set up a simple ERDDAP service us
 ### Requirements ###
 
 1. Install [Docker engine](https://docs.docker.com/engine/install/)
-2. Install [Docker compose](https://docs.docker.com/compose/install/)
+2. Install git
 
 ### Setup ###
 1. clone this repository: ```$ git clone https://github.com/emso-eric/erddap-playground``` 
@@ -18,7 +18,7 @@ Voilà! ERDDAP should be up and running at [http://localhost:8080/erddap](http:/
 
 This project is organized as follows:
 
-```bash
+```bash 
 ├── conf                 # Folder to store configuration files
 │   ├── datasets.xml     # Datasets configuration and HTML customization
 │   ├── setup.xml        # ERDDAP Server configuration
